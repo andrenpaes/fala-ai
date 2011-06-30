@@ -1,0 +1,491 @@
+
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:08:41) [GET]
+  [4;36;1mPalestra Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" ):
+  app/controllers/palestras_controller.rb:5:in `index'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (20110629180820)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:09:06) [GET]
+  [4;35;1mPalestra Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" ):
+  app/controllers/palestras_controller.rb:5:in `index'
+
+Rendered rescues/_trace (73.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:09:09) [GET]
+  [4;36;1mPalestra Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: palestras: SELECT * FROM "palestras" ):
+  app/controllers/palestras_controller.rb:5:in `index'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (20110629180820)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110629180820')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:10:05) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 26ms (View: 21, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 15:10:09) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 138ms (View: 135, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 15:15:38) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:15:41) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 15:15:43) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:15:45) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 15:15:58) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 15:16:01) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 16:48:52) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 16:48:59) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 16:49:31) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 58ms (View: 53, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 16:49:39) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 16:59:42) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 16:59:44) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 17:01:44) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing RatingsController#index (for 127.0.0.1 at 2011-06-29 17:04:03) [GET]
+  [4;36;1mRating Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: ratings: SELECT * FROM "ratings" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: ratings: SELECT * FROM "ratings" ):
+  app/controllers/ratings_controller.rb:5:in `index'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (20110629180820)
+Migrating to CreateRatings (20110629195010)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "ratings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rate" integer, "identificacao" varchar(255), "comentario" varchar(255), "palestra_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110629195010')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ratings")[0m
+
+
+Processing RatingsController#index (for 127.0.0.1 at 2011-06-29 17:04:56) [GET]
+  [4;35;1mRating Load (0.3ms)[0m   [0mSELECT * FROM "ratings" [0m
+Rendering template within layouts/ratings
+Rendering ratings/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/ratings]
+
+
+Processing RatingsController#new (for 127.0.0.1 at 2011-06-29 17:04:59) [GET]
+Rendering template within layouts/ratings
+Rendering ratings/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/ratings/new]
+
+
+Processing RatingsController#index (for 127.0.0.1 at 2011-06-29 17:05:00) [GET]
+  [4;36;1mRating Load (0.3ms)[0m   [0;1mSELECT * FROM "ratings" [0m
+Rendering template within layouts/ratings
+Rendering ratings/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/ratings]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 17:05:38) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-29 17:05:44) [GET]
+Rendering template within layouts/palestras
+Rendering palestras/new
+Completed in 84ms (View: 80, DB: 0) | 200 OK [http://localhost/palestras/new]
+
+
+Processing PalestrasController#create (for 127.0.0.1 at 2011-06-29 17:05:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "palestra"=>{"data(1i)"=>"2011", "horario(1i)"=>"2011", "data(2i)"=>"6", "horario(2i)"=>"6", "horario(3i)"=>"29", "horario(4i)"=>"20", "horario(5i)"=>"05", "palestrante"=>"BLag", "data(3i)"=>"29"}}
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "updated_at", "horario", "palestrante") VALUES('2011-06-29', '2011-06-29 20:05:56', '2011-06-29 20:05:56', '2011-06-29 20:05:00', 'BLag')[0m
+Redirected to http://localhost:3000/palestras/1
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:05:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 17:05:59) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:06:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:09:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:14:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #16 of app/views/palestras/show.html.erb:
+13:   <%=h @palestra.horario %>
+14: </p>
+15: 
+16: <% form_for(@rating) do |f| %>
+17:   <%= f.error_messages %>
+18: 
+19:   <p>
+
+    app/views/palestras/show.html.erb:16
+    app/controllers/palestras_controller.rb:18:in `show'
+
+Rendered rescues/_trace (40.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:15:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `rating' for #<Rating:0x10102ace0>) on line #21 of app/views/palestras/show.html.erb:
+18: 
+19:   <p>
+20:     <%= f.label :rating %><br />
+21:     <%= f.text_field :rating %>
+22:   </p>
+23:   <p>
+24:     <%= f.submit 'Create' %>
+
+    app/views/palestras/show.html.erb:21
+    app/views/palestras/show.html.erb:16
+    app/controllers/palestras_controller.rb:19:in `show'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 17:16:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 55ms (View: 49, DB: 0) | 200 OK [http://localhost/palestras/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (20110629180820)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ratings")[0m
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:14:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `post_path' for #<ActionView::Base:0x101f605c0>) on line #16 of app/views/palestras/show.html.erb:
+13:   <%=h @palestra.horario %>
+14: </p>
+15: 
+16: <% form_for(@rating, :url => "#{post_path(@palestra)}/rate") do |f| %>
+17:   <%= f.error_messages %>
+18: 
+19:   <p>
+
+    app/views/palestras/show.html.erb:16
+    app/controllers/palestras_controller.rb:19:in `show'
+
+Rendered rescues/_trace (77.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:17:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:19:35) [POST]
+  Parameters: {"rating"=>{"rate"=>"asd"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: rate):
+  app/controllers/palestras_controller.rb:27:in `new'
+  app/controllers/palestras_controller.rb:27:in `rate'
+
+Rendered rescues/_trace (71.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:19:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:19:41) [POST]
+  Parameters: {"rating"=>{"rate"=>"asd"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: rate):
+  app/controllers/palestras_controller.rb:27:in `new'
+  app/controllers/palestras_controller.rb:27:in `rate'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:19:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:20:00) [POST]
+  Parameters: {"rating"=>{"rate"=>"a"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: rate):
+  app/controllers/palestras_controller.rb:27:in `new'
+  app/controllers/palestras_controller.rb:27:in `rate'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:20:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:20:54) [POST]
+  Parameters: {"rating"=>{"rate"=>"asa"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+NameError (undefined local variable or method `rating' for #<PalestrasController:0x10178e9f0>):
+  app/controllers/palestras_controller.rb:28:in `rate'
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:21:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:21:23) [POST]
+  Parameters: {"rating"=>{"rate"=>"asa"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mRating Create (0.6ms)[0m   [0mINSERT INTO "ratings" ("comentario", "created_at", "identificacao", "updated_at", "rate", "palestra_id") VALUES(NULL, '2011-06-29 21:21:23', NULL, '2011-06-29 21:21:23', 0, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 64ms (DB: 1) | 302 Found [http://localhost/palestras/1/rate]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 18:21:23) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-29 18:22:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/palestras
+Rendering palestras/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#rate (for 127.0.0.1 at 2011-06-29 18:22:15) [POST]
+  Parameters: {"rating"=>{"rate"=>"10"}, "commit"=>"Create", "authenticity_token"=>"ZDuNEMt4raRyXFE857XNQlucj82H6U8cKI/CAANGOFY=", "id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mRating Create (0.3ms)[0m   [0mINSERT INTO "ratings" ("comentario", "created_at", "identificacao", "updated_at", "rate", "palestra_id") VALUES(NULL, '2011-06-29 21:22:15', NULL, '2011-06-29 21:22:15', 10, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/palestras/1/rate]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 18:22:15) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras]

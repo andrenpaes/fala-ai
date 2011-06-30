@@ -1,0 +1,2 @@
+module PalestrasHelper
+end

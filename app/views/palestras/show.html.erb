@@ -1,0 +1,29 @@
+<p>
+  <b>Palestrante:</b>
+  <%=h @palestra.palestrante %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%=h @palestra.data %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%=h @palestra.horario %>
+</p>
+
+<% form_for(@rating, :url => "#{palestra_path(@palestra)}/rate") do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :rate %><br />
+    <%= f.text_field :rate %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', palestras_path %>

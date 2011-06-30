@@ -1,0 +1,24 @@
+<h1>Editing palestra</h1>
+
+<% form_for(@palestra) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :palestrante %><br />
+    <%= f.text_field :palestrante %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </p>
+  <p>
+    <%= f.label :horario %><br />
+    <%= f.time_select :horario %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @palestra %> |
+<%= link_to 'Back', palestras_path %>

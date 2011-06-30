@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  palestrante: 
+  data: 
+  horario: 2011-06-29 15:08:20
+
+two:
+  palestrante: 
+  data: 
+  horario: 2011-06-29 15:08:20
