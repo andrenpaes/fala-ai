@@ -12,26 +12,26 @@
 ActiveRecord::Schema.define(:version => 1) do
 
   create_table "avaliacaos", :force => true do |t|
-    t.integer  "valor"
+    t.integer  "valor",        :null => false
     t.string   "comentario"
-    t.integer  "palestra_id"
+    t.integer  "palestra_id",  :null => false
     t.integer  "avaliador_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "avaliadors", :force => true do |t|
-    t.string   "nome"
-    t.string   "email"
+    t.string   "nome",       :null => false
+    t.string   "email",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "palestras", :force => true do |t|
-    t.string   "nome"
-    t.string   "palestrante"
-    t.date     "data"
-    t.time     "horario"
+    t.string   "nome",        :null => false
+    t.string   "palestrante", :null => false
+    t.date     "data",        :null => false
+    t.time     "horario",     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

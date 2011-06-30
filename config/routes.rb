@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :palestras
+  map.resources :palestras, :has_many => :avaliacao
   map.root :controller => 'palestras'
-  map.connect 'palestras/:id/rate', :controller => 'palestras', :action => 'rate'
+  #map.connect 'palestras/:id/avaliar', :controller => 'palestras', :action => 'avaliar'
+  #map.connect 'palestras/:id/gravar_avaliacao', :controller => 'palestras', :action => 'gravar_avaliacao'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

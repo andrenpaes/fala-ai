@@ -1,0 +1,47 @@
+<% title 'Avaliação de Palestras'%>
+<% subtitle 'Dê a sua opinião!'%>
+
+<p>
+  <b>Palestrante:</b>
+  <%=h @palestra.palestrante %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%=h @palestra.data %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%=h @palestra.horario %>
+</p>
+
+<% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :valor %><br />
+    <table border="0" style="width: 160px">
+      <tr>
+      <%1.upto 5 do |nota| %>
+        <th style="text-align: center"><%= nota %></th>
+      <%end%>
+      </tr>
+      <tr>
+      <%1.upto 5 do |nota| %>
+        <td style="text-align: center"><%= f.radio_button :valor, nota %></td>
+      <%end%>
+      </tr>
+    </table>
+  </p>
+  <p>
+    <%= f.label :comentario %><br />
+    <%= f.text_area :comentario %>
+  </p>
+  <p>
+    <%= f.submit 'Avaliar!' %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Voltar', palestras_path %>

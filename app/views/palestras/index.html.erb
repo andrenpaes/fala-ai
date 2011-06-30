@@ -11,10 +11,11 @@
 
 <% @palestras.each do |palestra| %>
   <tr>
-	<td><%= link_to palestra.nome, palestra %></td>
+    <td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
     <td><%=h palestra.data %></td>
     <td><%=h palestra.horario %></td>
+    <td><%= link_to 'Avaliar!', new_palestra_avaliacao_path(palestra) %></td>
   </tr>
 <% end %>
 </table>

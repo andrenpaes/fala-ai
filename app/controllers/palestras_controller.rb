@@ -1,7 +1,4 @@
 class PalestrasController < ApplicationController
-
-  # GET /palestras
-  # GET /palestras.xml
   def index
     @palestras = Palestra.all
 
@@ -11,11 +8,9 @@ class PalestrasController < ApplicationController
     end
   end
 
-  # GET /palestras/1
-  # GET /palestras/1.xml
   def show
     @palestra = Palestra.find(params[:id])
-    @avaliacao = Avaliacao.new
+    #@avaliacoes = Avaliacao.find(:palestra => @palestra)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -23,9 +18,20 @@ class PalestrasController < ApplicationController
     end
   end
 
-  def rate
+  # GET /palestra/1/avaliar
+  def avaliar
     @palestra = Palestra.find(params[:id])
-    @rating = Rating.new(params[:rating])
+    @avaliacao = Avaliacao.new
+
+    respond_to do |format|
+      format.html # avaliar.html.erb
+    end
+  end
+
+  # POST /palestra/1/avaliar
+  def gravar_avaliacao
+    @palestra = Palestra.find(params[:id])
+    @rating = Avaliacao.new(params[:avaliacao])
     @rating.palestra = @palestra
     @rating.save
 
