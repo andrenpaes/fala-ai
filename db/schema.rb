@@ -9,21 +9,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110629195010) do
+ActiveRecord::Schema.define(:version => 1) do
 
-  create_table "palestras", :force => true do |t|
-    t.string   "palestrante"
-    t.date     "data"
-    t.time     "horario"
+  create_table "avaliacaos", :force => true do |t|
+    t.integer  "valor"
+    t.string   "comentario"
+    t.integer  "palestra_id"
+    t.integer  "avaliador_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "ratings", :force => true do |t|
-    t.integer  "rate"
-    t.string   "identificacao"
-    t.string   "comentario"
-    t.integer  "palestra_id"
+  create_table "avaliadors", :force => true do |t|
+    t.string   "nome"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "palestras", :force => true do |t|
+    t.string   "nome"
+    t.string   "palestrante"
+    t.date     "data"
+    t.time     "horario"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

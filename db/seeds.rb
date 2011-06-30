@@ -5,3 +5,4 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+Palestra.create(:nome => 'Teste', :palestrante => 'Eu', :data => Date.today, :horario => Time.now)

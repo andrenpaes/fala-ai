@@ -1,3 +1,6 @@
+<% title 'Avaliação de Palestras'%>
+<% subtitle 'Dê a sua opinião!'%>
+
 <p>
   <b>Palestrante:</b>
   <%=h @palestra.palestrante %>
@@ -13,17 +16,32 @@
   <%=h @palestra.horario %>
 </p>
 
-<% form_for(@rating, :url => "#{palestra_path(@palestra)}/rate") do |f| %>
+<% form_for(@avaliacao, :url => "#{palestra_path(@palestra)}/rate") do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :rate %><br />
-    <%= f.text_field :rate %>
+    <%= f.label :valor %><br />
+    <table border="0" style="width: 160px">
+      <tr>
+      <%1.upto 5 do |nota| %>
+        <th style="text-align: center"><%= nota %></th>
+      <%end%>
+      </tr>
+      <tr>
+      <%1.upto 5 do |nota| %>
+        <td style="text-align: center"><%= f.radio_button :valor, nota %></td>
+      <%end%>
+      </tr>
+    </table>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.label :comentario %><br />
+    <%= f.text_area :comentario %>
+  </p>
+  <p>
+    <%= f.submit 'Avaliar!' %>
   </p>
 <% end %>
 
 
-<%= link_to 'Back', palestras_path %>
+<%= link_to 'Voltar', palestras_path %>

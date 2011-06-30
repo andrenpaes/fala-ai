@@ -1,24 +1,22 @@
-<h1>Listing palestras</h1>
+<% title 'Avaliação de Palestras'%>
+<% subtitle 'Palestras'%>
 
 <table>
   <tr>
+    <th>Palestra</th>
     <th>Palestrante</th>
     <th>Data</th>
-    <th>Horario</th>
+    <th>Horário</th>
   </tr>
 
 <% @palestras.each do |palestra| %>
   <tr>
+	<td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
     <td><%=h palestra.data %></td>
     <td><%=h palestra.horario %></td>
-    <td><%= link_to 'Rate', palestra %></td>
-    <td><%= link_to 'Edit', edit_palestra_path(palestra) %></td>
-    <td><%= link_to 'Destroy', palestra, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New palestra', new_palestra_path %>

@@ -1,0 +1,48 @@
+%html
+  %head
+    %title 
+      = "#{SITE_CONFIG[:app_name]} | #{yield(:title)}"
+    = use_theme('bitbucket')
+    
+  %body
+
+    #root
+      #header
+
+        #logo
+          = link_to image_tag('logo.png', :border => 0, :alt => SITE_CONFIG[:app_name])
+
+        %ul#navigation
+        
+          %li
+            = link_to "Home", root_url
+
+          - if session[:user_id].blank?
+            %li  
+              = link_to "Log in"
+            %li  
+              = link_to "Sign up"
+          
+          - else
+            %li 
+              = link_to "Log out <span class=\"small\">(username)</span>"
+
+        .clear
+
+      #contents
+
+        #page_title_container
+          
+          %h1.title
+            = yield(:title) || "Untitled"
+            
+          %h3.subtitle
+            = yield(:subtitle) || "Description goes here"
+        
+        = display_flash(flash)
+
+        = yield
+
+        #root_footer
+          
+          &copy #{Time.now.year} #{SITE_CONFIG[:copyright]}. All Rights Reserved.

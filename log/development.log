@@ -489,3 +489,1180 @@ Processing PalestrasController#index (for 127.0.0.1 at 2011-06-29 18:22:15) [GET
 Rendering template within layouts/palestras
 Rendering palestras/index
 Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:15:07) [GET]
+  [4;36;1mPalestra Load (32.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 67ms (View: 31, DB: 32) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:18:08) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:18:11) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/palestras
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:18:27) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:20:28) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:20:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:20:38) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:20:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:20:41) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:20:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:20:43) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:20:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:20:43) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:20:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:21:47) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:21:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:22:06) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:22:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:22:10) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-30 14:22:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo.png" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:25:26) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:25:35) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:25:47) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/palestras]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDatabase (1)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "palestras" already exists: CREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliador" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacao" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer, "comentario" varchar(255), "palestra_id" integer, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacao")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliador")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (146.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliador" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacao" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer, "comentario" varchar(255), "palestra_id" integer, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacao")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliador")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-06-30 17:32:53', 'Teste', '2011-06-30 17:32:53', '2011-06-30 14:32:53', 'Eu')[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:33:08) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#new (for 127.0.0.1 at 2011-06-30 14:33:31) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: index, rate, and show):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:33:36) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:34:01) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 14:38:19) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:38:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ActiveRecord::StatementInvalid (Could not find table 'avaliacaos'):
+  app/controllers/palestras_controller.rb:18:in `new'
+  app/controllers/palestras_controller.rb:18:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliador" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer, "comentario" varchar(255), "palestra_id" integer, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliador")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-06-30 17:39:23', 'Teste', '2011-06-30 17:39:23', '2011-06-30 14:39:23', 'Eu')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "palestrante" varchar(255), "data" date, "horario" time, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliadors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer, "comentario" varchar(255), "palestra_id" integer, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-06-30 17:39:38', 'Teste', '2011-06-30 17:39:38', '2011-06-30 14:39:38', 'Eu')[0m
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:39:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:40:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:40:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 58ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:40:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:40:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 14:41:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:03:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:03:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:04:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:04:34) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:04:39) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 51ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:04:41) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:04:44) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:06:01) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:06:10) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:06:18) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 56ms (View: 52, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:06:29) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:07:04) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+ERROR: compiling _run_erb_app47views47palestras47index46html46erb RAISED compile error
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:2: syntax error, unexpected '>'
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:7: unknown regexp options - th
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:8: syntax error, unexpected '<'
+    <th>Data</th>
+     ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:9: unknown regexp options - th
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:10: syntax error, unexpected '<'
+  </tr>
+   ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: unknown regexp options - td
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: unmatched ): /tr>
+
+<% @palestras.each do |palestra| ).to_s); @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat(( link_to palestra.nome, palestra ).to_s); @output_buffer.concat "</
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: syntax error, unexpected $undefined
+... @output_buffer.concat "</td>\n    <td>"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:16: unknown regexp options - td
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:16: syntax error, unexpected $undefined
+... @output_buffer.concat "</td>\n    <td>"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:17: unknown regexp options - tr
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:17: syntax error, unexpected $undefined
+...buffer.concat "</td>\n  </tr>\n"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n"
+                                 ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $undefined
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n"
+                                                     ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: unterminated string meets end of file
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47palestras47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--%= title 'Avalia\303\247\303\243o de Palestras'%>\n"
+; @output_buffer.concat(( subtitle 'Palestras'%-->
+
+<table>
+  <tr>
+    <th>Palestra</th>
+    <th>Palestrante</th>
+    <th>Data</th>
+    <th>Horário</th>
+  </tr>
+
+<% @palestras.each do |palestra| ).to_s); @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat(( link_to palestra.nome, palestra ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h palestra.palestrante ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h palestra.data ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h palestra.horario ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1252:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/controllers/palestras_controller.rb:8:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:14:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:2: syntax error, unexpected '>'
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:7: unknown regexp options - th
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:8: syntax error, unexpected '<'
+    <th>Data</th>
+     ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:9: unknown regexp options - th
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:10: syntax error, unexpected '<'
+  </tr>
+   ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: unknown regexp options - td
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: unmatched ): /tr>
+
+<% @palestras.each do |palestra| ).to_s); @output_buffer.concat "\n  <tr>\n\t<td>"
+
+; @output_buffer.concat(( link_to palestra.nome, palestra ).to_s); @output_buffer.concat "</
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:14: syntax error, unexpected $undefined
+... @output_buffer.concat "</td>\n    <td>"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:16: unknown regexp options - td
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:16: syntax error, unexpected $undefined
+... @output_buffer.concat "</td>\n    <td>"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:17: unknown regexp options - tr
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:17: syntax error, unexpected $undefined
+...buffer.concat "</td>\n  </tr>\n"
+                              ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n"
+                                 ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $undefined
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n"
+                                                     ^
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: unterminated string meets end of file
+/Users/andre/Desenvolvimento/Projetos/rateIt/app/views/palestras/index.html.erb:19: syntax error, unexpected $end, expecting ')') on line #2 of app/views/palestras/index.html.erb:
+1: <!--%= title 'Avaliação de Palestras'%>
+2: <%= subtitle 'Palestras'%-->
+3: 
+4: <table>
+5:   <tr>
+
+    app/views/palestras/index.html.erb:19:in `compile!'
+    app/controllers/palestras_controller.rb:8:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:07:14) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:07:26) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:07:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:07:35) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:10:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `merge' for 1:Fixnum) on line #25 of app/views/palestras/show.html.erb:
+22:   <p>
+23:     <%= f.label :valor %><br />
+24:     <%1.upto 5 do |nota| %>
+25:     <%= f.radio_button :valor, 'valor', nota %>
+26:     <%end%>
+27:   </p>
+28:   <p>
+
+    app/views/palestras/show.html.erb:25
+    app/views/palestras/show.html.erb:24:in `upto'
+    app/views/palestras/show.html.erb:24
+    app/views/palestras/show.html.erb:19
+    app/controllers/palestras_controller.rb:20:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:10:26) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:10:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `merge' for 1:Fixnum) on line #25 of app/views/palestras/show.html.erb:
+22:   <p>
+23:     <%= f.label :valor %><br />
+24:     <%1.upto 5 do |nota| %>
+25:     <%= f.radio_button :valor, 'valor', nota %>
+26:     <%end%>
+27:   </p>
+28:   <p>
+
+    app/views/palestras/show.html.erb:25
+    app/views/palestras/show.html.erb:24:in `upto'
+    app/views/palestras/show.html.erb:24
+    app/views/palestras/show.html.erb:19
+    app/controllers/palestras_controller.rb:20:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:12:03) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:12:04) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:12:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `merge' for "1":String) on line #25 of app/views/palestras/show.html.erb:
+22:   <p>
+23:     <%= f.label :valor %><br />
+24:     <%1.upto 5 do |nota| %>
+25:     <%= f.radio_button :valor, 'valor', nota.to_s %>
+26:     <%end%>
+27:   </p>
+28:   <p>
+
+    app/views/palestras/show.html.erb:25
+    app/views/palestras/show.html.erb:24:in `upto'
+    app/views/palestras/show.html.erb:24
+    app/views/palestras/show.html.erb:19
+    app/controllers/palestras_controller.rb:20:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:13:47) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:13:48) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:13:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `merge' for [1, 2, 3, 4, 5]:Array) on line #24 of app/views/palestras/show.html.erb:
+21: 
+22:   <p>
+23:     <%= f.label :valor %><br />
+24:     <%= f.radio_button :valor, 'valor', [1, 2, 3, 4, 5] %>
+25:   </p>
+26:   <p>
+27:     <%= f.label :comentario %><br />
+
+    app/views/palestras/show.html.erb:24
+    app/views/palestras/show.html.erb:19
+    app/controllers/palestras_controller.rb:20:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:17:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:20:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:22:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:26:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:26:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:26:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 61ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:26:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:27:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:27:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 62ms (View: 56, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:27:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:27:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:28:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:29:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 64ms (View: 58, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 15:29:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 15:29:29) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
