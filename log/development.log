@@ -5,3 +5,17 @@ Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 18:32:02) [GET
 Rendering template within layouts/themes
 Rendering palestras/index
 Completed in 100ms (View: 85, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 18:32:52) [GET]
+  [4;35;1mPalestra Load (1.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 42ms (View: 32, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 18:48:46) [GET]
+  [4;36;1mPalestra Load (1.6ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 40ms (View: 30, DB: 2) | 200 OK [http://localhost/palestras]
