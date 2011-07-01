@@ -4950,3 +4950,368 @@ Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 15:01:06) [GET]
 Rendering template within layouts/themes
 Rendering palestras/show
 Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/14]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:17:38) [GET]
+  [4;35;1mPalestra Load (1.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 36ms (View: 25, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:18:51) [GET]
+  [4;36;1mPalestra Load (1.5ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (undefined method `minute' for Sat Jan 01 15:30:00 UTC 2000:Time) on line #13 of app/views/palestras/index.html.erb:
+10:     <th>Horário</th>
+11:   </tr>
+12: <% @palestras_por_data[data].each do |palestra| %>
+13:   <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+14:     <td><%= link_to palestra.nome, palestra %></td>
+15:     <td><%=h palestra.palestrante %></td>
+16:     <td><%=h palestra.horario.to_s(:time) %></td>
+
+    app/helpers/palestras_helper.rb:8:in `em_andamento?'
+    app/views/palestras/index.html.erb:13
+    app/views/palestras/index.html.erb:12:in `each'
+    app/views/palestras/index.html.erb:12
+    app/views/palestras/index.html.erb:4:in `each'
+    app/views/palestras/index.html.erb:4:in `each_with_index'
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:13:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:19:04) [GET]
+  [4;35;1mPalestra Load (1.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (undefined method `minutes' for Sat Jan 01 15:30:00 UTC 2000:Time) on line #13 of app/views/palestras/index.html.erb:
+10:     <th>Horário</th>
+11:   </tr>
+12: <% @palestras_por_data[data].each do |palestra| %>
+13:   <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+14:     <td><%= link_to palestra.nome, palestra %></td>
+15:     <td><%=h palestra.palestrante %></td>
+16:     <td><%=h palestra.horario.to_s(:time) %></td>
+
+    app/helpers/palestras_helper.rb:8:in `em_andamento?'
+    app/views/palestras/index.html.erb:13
+    app/views/palestras/index.html.erb:12:in `each'
+    app/views/palestras/index.html.erb:12
+    app/views/palestras/index.html.erb:4:in `each'
+    app/views/palestras/index.html.erb:4:in `each_with_index'
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:13:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:19:13) [GET]
+  [4;36;1mPalestra Load (2.7ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (undefined method `minutes' for Fri Jul 01 15:19:13 -0300 2011:Time) on line #13 of app/views/palestras/index.html.erb:
+10:     <th>Horário</th>
+11:   </tr>
+12: <% @palestras_por_data[data].each do |palestra| %>
+13:   <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+14:     <td><%= link_to palestra.nome, palestra %></td>
+15:     <td><%=h palestra.palestrante %></td>
+16:     <td><%=h palestra.horario.to_s(:time) %></td>
+
+    app/helpers/palestras_helper.rb:8:in `em_andamento?'
+    app/views/palestras/index.html.erb:13
+    app/views/palestras/index.html.erb:12:in `each'
+    app/views/palestras/index.html.erb:12
+    app/views/palestras/index.html.erb:4:in `each'
+    app/views/palestras/index.html.erb:4:in `each_with_index'
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:13:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:19:17) [GET]
+  [4;35;1mPalestra Load (1.3ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 35ms (View: 26, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:19:36) [GET]
+  [4;36;1mPalestra Load (1.7ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 35ms (View: 24, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:22:28) [GET]
+  [4;35;1mPalestra Load (2.4ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (undefined local variable or method `hora_palestra' for #<ActionView::Base:0x1034e2da8>) on line #13 of app/views/palestras/index.html.erb:
+10:     <th>Horário</th>
+11:   </tr>
+12: <% @palestras_por_data[data].each do |palestra| %>
+13:   <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+14:     <td><%= link_to palestra.nome, palestra %></td>
+15:     <td><%=h palestra.palestrante %></td>
+16:     <td><%=h palestra.horario.to_s(:time) %></td>
+
+    app/helpers/palestras_helper.rb:7:in `em_andamento?'
+    app/views/palestras/index.html.erb:13
+    app/views/palestras/index.html.erb:12:in `each'
+    app/views/palestras/index.html.erb:12
+    app/views/palestras/index.html.erb:4:in `each'
+    app/views/palestras/index.html.erb:4:in `each_with_index'
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:13:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:22:42) [GET]
+  [4;36;1mPalestra Load (1.6ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 35ms (View: 25, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:23:41) [GET]
+  [4;35;1mPalestra Load (1.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 37ms (View: 25, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:24:05) [GET]
+  [4;36;1mPalestra Load (1.5ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 39ms (View: 28, DB: 1) | 200 OK [http://localhost/palestras]
+/!\ FAILSAFE /!\  Fri Jul 01 15:26:44 -0300 2011
+  Status: 500 Internal Server Error
+  /Users/andre/Desenvolvimento/Projetos/rateIt/app/helpers/palestras_helper.rb:12: syntax error, unexpected $end, expecting kEND
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:250:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:162:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/andre/Desenvolvimento/Projetos/rateIt/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:451:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:106:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:118:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:14:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Jul 01 15:26:54 -0300 2011
+  Status: 500 Internal Server Error
+  /Users/andre/Desenvolvimento/Projetos/rateIt/app/helpers/palestras_helper.rb:12: syntax error, unexpected $end, expecting kEND
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:250:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:162:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/andre/Desenvolvimento/Projetos/rateIt/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:451:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:106:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:118:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/webrick.rb:14:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.11/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:27:13) [GET]
+  [4;35;1mPalestra Load (1.6ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 39ms (View: 29, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:27:43) [GET]
+  [4;36;1mPalestra Load (1.4ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 40ms (View: 31, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:28:20) [GET]
+  [4;35;1mPalestra Load (2.3ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 97ms (View: 85, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:28:56) [GET]
+  [4;36;1mPalestra Load (1.4ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 37ms (View: 27, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:29:12) [GET]
+  [4;35;1mPalestra Load (1.4ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 41ms (View: 31, DB: 1) | 200 OK [http://localhost/palestras]
