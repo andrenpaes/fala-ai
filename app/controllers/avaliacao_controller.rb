@@ -6,7 +6,6 @@ class AvaliacaoController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
     end
-    puts "Blah!"
   end
 
   def create

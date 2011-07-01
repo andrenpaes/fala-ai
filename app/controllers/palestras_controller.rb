@@ -1,6 +1,14 @@
 class PalestrasController < ApplicationController
   def index
-    @palestras = Palestra.all
+    @palestras = Palestra.all(:order => 'data DESC, horario ASC')
+    @datas = []
+    @palestras_por_data = {}
+    @palestras.each { |palestra|
+      @datas << palestra.data if @datas.index(palestra.data).nil?
+      @palestras_por_data[palestra.data] = [] if @palestras_por_data[palestra.data].nil?
+      @palestras_por_data[palestra.data] << palestra
+    }
+    puts @palestras_por_data.keys.size
 
     respond_to do |format|
       format.html # index.html.erb

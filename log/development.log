@@ -4172,3 +4172,684 @@ Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:49:46) [PO
 Rendering template within layouts/themes
 Rendering avaliacao/new
 Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:50:50) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 12:50:53) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:01:22) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+
+NameError (undefined local variable or method `palestras' for #<PalestrasController:0x104480850>):
+  app/controllers/palestras_controller.rb:5:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:01:41) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (undefined method `each_pair' for nil:NilClass) on line #4 of app/views/palestras/index.html.erb:
+1: <% title 'Avaliação de Palestras'%>
+2: <% subtitle 'Palestras'%>
+3: 
+4: <% @datas.each_pair do |data, palestras|%>
+5: <h2>Palestras do dia <%h data.strftime('%d/%m/%Y') %> 
+6: <table>
+7:   <tr>
+
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:9:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:01:55) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:02:08) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:02:13) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:02:39) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:03:14) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:03:36) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:04:05) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:04:26) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:04:46) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:05:00) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:05:05) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 50ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:05:31) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+
+NoMethodError (undefined method `add' for []:Array):
+  app/controllers/palestras_controller.rb:7:in `index'
+  app/controllers/palestras_controller.rb:5:in `each'
+  app/controllers/palestras_controller.rb:5:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (19.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:06:42) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:06:56) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:07:34) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:08:46) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:18:27) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:18:48) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:19:09) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:19:22) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:20:12) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:20:56) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:23:42) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+
+NameError (uninitialized constant PalestrasController::OrderedHash):
+  app/controllers/palestras_controller.rb:4:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:26:34) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 404ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:27:57) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size) on line #4 of app/views/palestras/index.html.erb:
+1: <% title 'Avaliação de Palestras'%>
+2: <% subtitle 'Palestras'%>
+3: 
+4: <%=h @datas.size %>
+5: <% @datas.each do |data|%>
+6: <h2>Palestras do dia <%h data.strftime('%d/%m/%Y') %> 
+7: <table>
+
+    app/views/palestras/index.html.erb:4
+    app/controllers/palestras_controller.rb:9:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:28:23) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:29:00) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:29:14) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:31:05) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:31:36) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 13:35:09) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data, horario DESC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 53ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "palestrante" varchar(255) NOT NULL, "data" date NOT NULL, "horario" time NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliadors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer NOT NULL, "comentario" varchar(255), "palestra_id" integer NOT NULL, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.0ms)[0m   [0;1mSQLite3::ConstraintException: palestras.nome may not be NULL: INSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES(NULL, '2011-07-01 16:57:40', NULL, '2011-07-01 16:57:40', NULL, NULL)[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', '2012: o ano em que a Terra parou acabou, porque o software travou', '2011-07-01 16:58:21', '2000-01-01 09:00:00', 'Vinicius Teles')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Individuals and interactions over process and tools', '2011-07-01 16:58:21', '2000-01-01 11:00:00', 'David Paniz')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Mantendo a Qualidade dos Códigos de Teste', '2011-07-01 16:58:21', '2000-01-01 11:00:00', 'Maurício Szabo')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Como fazer com que seu futuro PO exerça o seu papel efetivamente', '2011-07-01 16:58:21', '2000-01-01 11:00:00', 'Felipe do Prado Osti')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'The Agile city-building game', '2011-07-01 16:58:21', '2000-01-01 11:00:00', 'Alejandra Alfonso e Emilio Gutter ')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Manifesto for Meta-Agile - Coaching para Agilidade além da própria Agilidade', '2011-07-01 16:58:21', '2000-01-01 11:00:00', 'Manoel Pimentel Medeiros')[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Avançando nos Fundamentos do Lean Thinking', '2011-07-01 16:58:21', '2000-01-01 12:00:00', 'Christopher G. Thompson')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'O Raio-X de um projeto Ágil: erros e acertos no desenvolvimento de uma plataforma de serviços', '2011-07-01 16:58:21', '2000-01-01 12:00:00', 'Rodrigo Veiga')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Negociando limites', '2011-07-01 16:58:21', '2000-01-01 14:30:00', 'Paulo Caroli')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Scala ao Resgate: Testes de Software mais expressivos e com menos código na JVM', '2011-07-01 16:58:21', '2000-01-01 14:30:00', 'Lucas Torri e José Filipe Sabella Barciella')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Porque é difícil trabalhar com os valores ageis em projetos de escopo fechado', '2011-07-01 16:58:21', '2000-01-01 14:30:00', 'André Nascimento')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Trabalhando de forma eficaz com mentalidade legada', '2011-07-01 16:58:21', '2000-01-01 14:30:00', 'Rodrigo Yoshima')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Dez anos depois, você realmente sabe o que é um produto com valor agregado?', '2011-07-01 16:58:21', '2000-01-01 14:30:00', 'Luiz Claudio Parzianello')[0m
+  [4;35;1mPalestra Create (0.6ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Como formar um programador 10x', '2011-07-01 16:58:21', '2000-01-01 15:30:00', 'Luca Bastos')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'De Porto Alegre a Fortaleza. O que aprendemos e fizemos desde o Agile Brazil 2010', '2011-07-01 16:58:21', '2000-01-01 15:30:00', 'Rafael Barbosa Camargo e Renato Freire Ricardo')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Visões de Mercado sobre Equipes de Trabalho Autogerenciadas', '2011-07-01 16:58:21', '2000-01-01 15:30:00', 'Rafael Sabbagh')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Captando requisitos de forma ágil', '2011-07-01 16:58:21', '2000-01-01 17:00:00', 'Nícolas Iensen')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Testes em ambientes Ágeis', '2011-07-01 16:58:21', '2000-01-01 17:00:00', 'Jose Papo')[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Escalando agile na GVT Telecom - um case real', '2011-07-01 16:58:21', '2000-01-01 17:00:00', 'Felipe Rodrigues de Almeida e Saulo Abreu')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Tudo o que você precisa saber sobre contratos ágeis de software', '2011-07-01 16:58:21', '2000-01-01 17:00:00', 'Thiago Alves')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Lean Startup', '2011-07-01 16:58:21', '2000-01-01 17:00:00', 'Matheus Haddad e Alexandre Gomes')[0m
+  [4;35;1mPalestra Create (0.5ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Otimização de execução de testes através de níveis', '2011-07-01 16:58:21', '2000-01-01 18:00:00', 'José Mathias Gusso')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Nearshore Agile', '2011-07-01 16:58:21', '2000-01-01 18:00:00', 'Danilo Ruziska')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Ciclos de Avaliação de Pressupostos: Entendendo Lean, Kanban e Agilidade sob uma nova perspectiva', '2011-07-01 16:58:21', '2000-01-01 18:00:00', 'Alisson Vale')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:58:21', 'Clean Code', '2011-07-01 16:58:21', '2000-01-01 18:00:00', 'Rodrigo Branas')[0m
+  [4;35;1mPalestra Create (0.0ms)[0m   [0mSQLite3::ConstraintException: palestras.nome may not be NULL: INSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES(NULL, '2011-07-01 16:58:21', NULL, '2011-07-01 16:58:21', NULL, NULL)[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', '2012: o ano em que a Terra parou acabou, porque o software travou', '2011-07-01 16:59:46', '2000-01-01 09:00:00', 'Vinicius Teles')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'Individuals and interactions over process and tools', '2011-07-01 16:59:46', '2000-01-01 11:00:00', 'David Paniz')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'Mantendo a Qualidade dos Códigos de Teste', '2011-07-01 16:59:46', '2000-01-01 11:00:00', 'Maurício Szabo')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'Como fazer com que seu futuro PO exerça o seu papel efetivamente', '2011-07-01 16:59:46', '2000-01-01 11:00:00', 'Felipe do Prado Osti')[0m
+  [4;36;1mPalestra Create (0.5ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'The Agile city-building game', '2011-07-01 16:59:46', '2000-01-01 11:00:00', 'Alejandra Alfonso e Emilio Gutter ')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'Manifesto for Meta-Agile - Coaching para Agilidade além da própria Agilidade', '2011-07-01 16:59:46', '2000-01-01 11:00:00', 'Manoel Pimentel Medeiros')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:46', 'Avançando nos Fundamentos do Lean Thinking', '2011-07-01 16:59:46', '2000-01-01 12:00:00', 'Christopher G. Thompson')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'O Raio-X de um projeto Ágil: erros e acertos no desenvolvimento de uma plataforma de serviços', '2011-07-01 16:59:47', '2000-01-01 12:00:00', 'Rodrigo Veiga')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Negociando limites', '2011-07-01 16:59:47', '2000-01-01 14:30:00', 'Paulo Caroli')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Scala ao Resgate: Testes de Software mais expressivos e com menos código na JVM', '2011-07-01 16:59:47', '2000-01-01 14:30:00', 'Lucas Torri e José Filipe Sabella Barciella')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Porque é difícil trabalhar com os valores ageis em projetos de escopo fechado', '2011-07-01 16:59:47', '2000-01-01 14:30:00', 'André Nascimento')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Trabalhando de forma eficaz com mentalidade legada', '2011-07-01 16:59:47', '2000-01-01 14:30:00', 'Rodrigo Yoshima')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Dez anos depois, você realmente sabe o que é um produto com valor agregado?', '2011-07-01 16:59:47', '2000-01-01 14:30:00', 'Luiz Claudio Parzianello')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Como formar um programador 10x', '2011-07-01 16:59:47', '2000-01-01 15:30:00', 'Luca Bastos')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'De Porto Alegre a Fortaleza. O que aprendemos e fizemos desde o Agile Brazil 2010', '2011-07-01 16:59:47', '2000-01-01 15:30:00', 'Rafael Barbosa Camargo e Renato Freire Ricardo')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Visões de Mercado sobre Equipes de Trabalho Autogerenciadas', '2011-07-01 16:59:47', '2000-01-01 15:30:00', 'Rafael Sabbagh')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Captando requisitos de forma ágil', '2011-07-01 16:59:47', '2000-01-01 17:00:00', 'Nícolas Iensen')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Testes em ambientes Ágeis', '2011-07-01 16:59:47', '2000-01-01 17:00:00', 'Jose Papo')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Escalando agile na GVT Telecom - um case real', '2011-07-01 16:59:47', '2000-01-01 17:00:00', 'Felipe Rodrigues de Almeida e Saulo Abreu')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Tudo o que você precisa saber sobre contratos ágeis de software', '2011-07-01 16:59:47', '2000-01-01 17:00:00', 'Thiago Alves')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Lean Startup', '2011-07-01 16:59:47', '2000-01-01 17:00:00', 'Matheus Haddad e Alexandre Gomes')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Otimização de execução de testes através de níveis', '2011-07-01 16:59:47', '2000-01-01 18:00:00', 'José Mathias Gusso')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Nearshore Agile', '2011-07-01 16:59:47', '2000-01-01 18:00:00', 'Danilo Ruziska')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Ciclos de Avaliação de Pressupostos: Entendendo Lean, Kanban e Agilidade sob uma nova perspectiva', '2011-07-01 16:59:47', '2000-01-01 18:00:00', 'Alisson Vale')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 16:59:47', 'Clean Code', '2011-07-01 16:59:47', '2000-01-01 18:00:00', 'Rodrigo Branas')[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:00:03) [GET]
+  [4;36;1mPalestra Load (1.5ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data, horario DESC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 921ms (View: 909, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:01:13) [GET]
+  [4;35;1mPalestra Load (2.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data, horario DESC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 35ms (View: 23, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "palestrante" varchar(255) NOT NULL, "data" date NOT NULL, "horario" time NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliadors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer NOT NULL, "comentario" varchar(255), "palestra_id" integer NOT NULL, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', '2012: o ano em que a Terra parou acabou, porque o software travou', '2011-07-01 17:01:44', '2000-01-01 09:00:00', 'Vinicius Teles')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Individuals and interactions over process and tools', '2011-07-01 17:01:44', '2000-01-01 11:00:00', 'David Paniz')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Mantendo a Qualidade dos Códigos de Teste', '2011-07-01 17:01:44', '2000-01-01 11:00:00', 'Maurício Szabo')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Como fazer com que seu futuro PO exerça o seu papel efetivamente', '2011-07-01 17:01:44', '2000-01-01 11:00:00', 'Felipe do Prado Osti')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'The Agile city-building game', '2011-07-01 17:01:44', '2000-01-01 11:00:00', 'Alejandra Alfonso e Emilio Gutter ')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Manifesto for Meta-Agile - Coaching para Agilidade além da própria Agilidade', '2011-07-01 17:01:44', '2000-01-01 11:00:00', 'Manoel Pimentel Medeiros')[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Avançando nos Fundamentos do Lean Thinking', '2011-07-01 17:01:44', '2000-01-01 12:00:00', 'Christopher G. Thompson')[0m
+  [4;35;1mPalestra Create (0.4ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'O Raio-X de um projeto Ágil: erros e acertos no desenvolvimento de uma plataforma de serviços', '2011-07-01 17:01:44', '2000-01-01 12:00:00', 'Rodrigo Veiga')[0m
+  [4;36;1mPalestra Create (0.4ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Negociando limites', '2011-07-01 17:01:44', '2000-01-01 14:30:00', 'Paulo Caroli')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Scala ao Resgate: Testes de Software mais expressivos e com menos código na JVM', '2011-07-01 17:01:44', '2000-01-01 14:30:00', 'Lucas Torri e José Filipe Sabella Barciella')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Porque é difícil trabalhar com os valores ageis em projetos de escopo fechado', '2011-07-01 17:01:44', '2000-01-01 14:30:00', 'André Nascimento')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Trabalhando de forma eficaz com mentalidade legada', '2011-07-01 17:01:44', '2000-01-01 14:30:00', 'Rodrigo Yoshima')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Dez anos depois, você realmente sabe o que é um produto com valor agregado?', '2011-07-01 17:01:44', '2000-01-01 14:30:00', 'Luiz Claudio Parzianello')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Como formar um programador 10x', '2011-07-01 17:01:44', '2000-01-01 15:30:00', 'Luca Bastos')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'De Porto Alegre a Fortaleza. O que aprendemos e fizemos desde o Agile Brazil 2010', '2011-07-01 17:01:44', '2000-01-01 15:30:00', 'Rafael Barbosa Camargo e Renato Freire Ricardo')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Visões de Mercado sobre Equipes de Trabalho Autogerenciadas', '2011-07-01 17:01:44', '2000-01-01 15:30:00', 'Rafael Sabbagh')[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Captando requisitos de forma ágil', '2011-07-01 17:01:44', '2000-01-01 17:00:00', 'Nícolas Iensen')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Testes em ambientes Ágeis', '2011-07-01 17:01:44', '2000-01-01 17:00:00', 'Jose Papo')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Escalando agile na GVT Telecom - um case real', '2011-07-01 17:01:44', '2000-01-01 17:00:00', 'Felipe Rodrigues de Almeida e Saulo Abreu')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Tudo o que você precisa saber sobre contratos ágeis de software', '2011-07-01 17:01:44', '2000-01-01 17:00:00', 'Thiago Alves')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Lean Startup', '2011-07-01 17:01:44', '2000-01-01 17:00:00', 'Matheus Haddad e Alexandre Gomes')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Otimização de execução de testes através de níveis', '2011-07-01 17:01:44', '2000-01-01 18:00:00', 'José Mathias Gusso')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Nearshore Agile', '2011-07-01 17:01:44', '2000-01-01 18:00:00', 'Danilo Ruziska')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Ciclos de Avaliação de Pressupostos: Entendendo Lean, Kanban e Agilidade sob uma nova perspectiva', '2011-07-01 17:01:44', '2000-01-01 18:00:00', 'Alisson Vale')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:01:44', 'Clean Code', '2011-07-01 17:01:44', '2000-01-01 18:00:00', 'Rodrigo Branas')[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:01:48) [GET]
+  [4;36;1mPalestra Load (1.0ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data, horario DESC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:02:10) [GET]
+  [4;35;1mPalestra Load (0.9ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (25.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "palestrante" varchar(255) NOT NULL, "data" date NOT NULL, "horario" time NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "avaliadors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer NOT NULL, "comentario" varchar(255), "palestra_id" integer NOT NULL, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.0ms)[0m   [0;1mSQLite3::ConstraintException: palestras.palestrante may not be NULL: INSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES(NULL, '2011-07-01 17:16:27', '7/1/2011', '2011-07-01 17:16:27', '2000-01-01 00:00:00', NULL)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePalestras (1)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "palestras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "palestrante" varchar(255) NOT NULL, "data" date NOT NULL, "horario" time NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "avaliadors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "avaliacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor" integer NOT NULL, "comentario" varchar(255), "palestra_id" integer NOT NULL, "avaliador_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', '2012: o ano em que a Terra parou acabou, porque o software travou', '2011-07-01 17:18:13', '2000-01-01 09:00:00', 'Vinicius Teles')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Individuals and interactions over process and tools', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'David Paniz')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Mantendo a Qualidade dos Códigos de Teste', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Maurício Szabo')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Como fazer com que seu futuro PO exerça o seu papel efetivamente', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Felipe do Prado Osti')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'The Agile city-building game', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Alejandra Alfonso e Emilio Gutter ')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Manifesto for Meta-Agile - Coaching para Agilidade além da própria Agilidade', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Manoel Pimentel Medeiros')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Avançando nos Fundamentos do Lean Thinking', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Christopher G. Thompson')[0m
+  [4;35;1mPalestra Create (0.3ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'O Raio-X de um projeto Ágil: erros e acertos no desenvolvimento de uma plataforma de serviços', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Rodrigo Veiga')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Negociando limites', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Paulo Caroli')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Scala ao Resgate: Testes de Software mais expressivos e com menos código na JVM', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Lucas Torri e José Filipe Sabella Barciella')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Porque é difícil trabalhar com os valores ageis em projetos de escopo fechado', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'André Nascimento')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Trabalhando de forma eficaz com mentalidade legada', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Rodrigo Yoshima')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Dez anos depois, você realmente sabe o que é um produto com valor agregado?', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Luiz Claudio Parzianello')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Como formar um programador 10x', '2011-07-01 17:18:13', '2000-01-01 15:30:00', 'Luca Bastos')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'De Porto Alegre a Fortaleza. O que aprendemos e fizemos desde o Agile Brazil 2010', '2011-07-01 17:18:13', '2000-01-01 15:30:00', 'Rafael Barbosa Camargo e Renato Freire Ricardo')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Visões de Mercado sobre Equipes de Trabalho Autogerenciadas', '2011-07-01 17:18:13', '2000-01-01 15:30:00', 'Rafael Sabbagh')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Captando requisitos de forma ágil', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Nícolas Iensen')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Testes em ambientes Ágeis', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Jose Papo')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Escalando agile na GVT Telecom - um case real', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Felipe Rodrigues de Almeida e Saulo Abreu')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Tudo o que você precisa saber sobre contratos ágeis de software', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Thiago Alves')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Lean Startup', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Matheus Haddad e Alexandre Gomes')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Otimização de execução de testes através de níveis', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'José Mathias Gusso')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Nearshore Agile', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Danilo Ruziska')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Ciclos de Avaliação de Pressupostos: Entendendo Lean, Kanban e Agilidade sob uma nova perspectiva', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Alisson Vale')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-07-01', '2011-07-01 17:18:13', 'Clean Code', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Rodrigo Branas')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Priorizando a Felicidade', '2011-07-01 17:18:13', '2000-01-01 09:00:00', 'Joshua Keriesvky')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Jogando com valores ágeis', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Lucianna Almeida e Thiago Colucci')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Design Up Front'' (na dose certa) pode fazer bem ao seu projeto!', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Rodolpho Ugolini Neto')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Startup em uma grande empresa: a evolução de um processo', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Henrique Imbertti Junior')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Usando indicadores para Auxiliar a Dar Mais Visibilidade e a Melhorar o Desempenho', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Clavius Tales')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Learning Kaizen from TOYOTA', '2011-07-01 17:18:13', '2000-01-01 11:00:00', 'Kenji Hiranabe')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Desmistificando o Trunk Based Development', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Carlos Lopes e Guilherme Lacerda')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Como uma Empresa de Mecatrônica Aderiu a Taskboards e Kanbans na sua Gestão à Vista', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Teresa Maciel')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'LIGHTNING TALKS 4', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Danilo Sato, Daniel Wildt, Giovanni Bassi, Felipe Rodrigues de Almeida, Manoel Pimentel Medeiros')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'O grandiosismo dos loucos', '2011-07-01 17:18:13', '2000-01-01 12:00:00', 'Cecilia Fernandes e Guilherme Silveira')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Integrando equipes ágeis. Um overview sobre os problemas em escalar agilidade', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Emerson Carvalho e Anderson Faria')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Testes unitários com C++', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Ramiro Batista da Luz')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'StoryTouch: de protótipo a produto', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Hugo Corbucci e Fernando Freire da Silva')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Todo mundo nasce ágil', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Saulo Arruda')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'LIGHTNING TALKS 2', '2011-07-01 17:18:13', '2000-01-01 14:30:00', 'Bruno Pedroso, Rafael Barbosa Camargo, Manoel Pimentel Medeiros, Rodrigo Yoshima, Daniel Wildt')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Retrospectivas Ágeis', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Vitor Pelizza')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Coding Dojo: Formato Kake', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Hugo Corbucci e Mariana Bravo')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Scrum e a Espiral Positiva', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Douglas Aguiar e Giovanni Bassi')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'LIGHTNING TALKS 3', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Matheus Haddad e Flavio Logullo, Rodrigo Branas, Leo Silva e Ulisses Telemaco, Rodolpho Ugolini Neto, Daniel Wildt e Hélio Medeiros')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Agile Transitions - Culture of Change or Change of Culture?', '2011-07-01 17:18:13', '2000-01-01 17:00:00', 'Thomas Lissajoux')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Ágil como Bruce Lee', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Luiz Fernando Amorim Ribeiro e João Alberto Vortmann')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Dar caos à ordem', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Christiano Milfont')[0m
+  [4;35;1mPalestra Create (0.2ms)[0m   [0mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Otimizando a entrega de valor - Além de custo, prazo e escopo', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Samuel Crescêncio')[0m
+  [4;36;1mPalestra Create (0.2ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-07-01 17:18:13', 'Prepare a Sandwich like an Agile Business Analyst', '2011-07-01 17:18:13', '2000-01-01 18:00:00', 'Lucas Medina e Kimberley Szuta')[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:18:19) [GET]
+  [4;36;1mPalestra Load (1.5ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 45ms (View: 36, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:19:31) [GET]
+  [4;35;1mPalestra Load (1.4ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 92ms (View: 38, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:20:31) [GET]
+  [4;36;1mPalestra Load (2.2ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 35ms (View: 22, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 14:21:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 14:21:30) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 14:21:41) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"Muito Bom!", "valor"=>"4"}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mAvaliacao Create (0.3ms)[0m   [0;1mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('Muito Bom!', '2011-07-01 17:21:41', NULL, '2011-07-01 17:21:41', 4, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 14:21:41) [GET]
+  [4;35;1mPalestra Load (1.5ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 43ms (View: 29, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 14:21:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 58ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras/1]

@@ -5,4 +5,7 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
-Palestra.create(:nome => 'Teste', :palestrante => 'Eu', :data => Date.today, :horario => Time.now)
+require 'csv'
+CSV.open('palestras.csv', 'r') do |row|
+  Palestra.create(:nome => row[0], :palestrante => row[3], :data => row[1], :horario => row[2])
+end
