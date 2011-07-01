@@ -2,7 +2,7 @@ module PalestrasHelper
   include ActionView::Helpers::NumberHelper
 
   def em_andamento?(palestra)
-    agora = Time.now
+    agora = Time.now.getlocal("-03:00")
     hora_palestra = palestra.horario.hour + (palestra.horario.min / 60.0)
     if palestra.data == Date.today
       return true if hora_palestra.ceil == agora.hour

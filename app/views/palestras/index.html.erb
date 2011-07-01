@@ -10,7 +10,7 @@
     <th>Horário</th>
   </tr>
 <% @palestras_por_data[data].each do |palestra| %>
-  <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+  <tr>
     <td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
     <td><%=h palestra.horario.to_s(:time) %></td>
