@@ -1,0 +1,7 @@
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 18:32:02) [GET]
+  [4;36;1mPalestra Load (1.9ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 100ms (View: 85, DB: 2) | 200 OK [http://localhost/palestras]
