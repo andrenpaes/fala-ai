@@ -5315,3 +5315,84 @@ Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 15:29:12) [GET
 Rendering template within layouts/themes
 Rendering palestras/index
 Completed in 41ms (View: 31, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 16:46:03) [GET]
+  [4;36;1mPalestra Load (2.4ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 43ms (View: 29, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 16:46:19) [GET]
+  Parameters: {"palestra_id"=>"14"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/14/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 16:46:22) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"14", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/14/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 16:46:32) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"14", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"", "valor"=>"5"}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+  [4;36;1mAvaliacao Create (0.3ms)[0m   [0;1mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('', '2011-07-01 19:46:32', NULL, '2011-07-01 19:46:32', 5, 14)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/palestras/14/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 16:46:32) [GET]
+  [4;35;1mPalestra Load (1.9ms)[0m   [0mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 50ms (View: 37, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 16:46:35) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 14) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 14 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/14]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 16:46:40) [GET]
+  Parameters: {"palestra_id"=>"14"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/14/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 16:46:49) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"14", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"Muito bom!", "valor"=>"5"}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+  [4;35;1mAvaliacao Create (0.3ms)[0m   [0mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('Muito bom!', '2011-07-01 19:46:49', NULL, '2011-07-01 19:46:49', 5, 14)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/palestras/14/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 16:46:49) [GET]
+  [4;36;1mPalestra Load (2.2ms)[0m   [0;1mSELECT * FROM "palestras" ORDER BY data DESC, horario ASC[0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 53ms (View: 34, DB: 2) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 16:46:52) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 14) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 14) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 14 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 60ms (View: 52, DB: 0) | 200 OK [http://localhost/palestras/14]
