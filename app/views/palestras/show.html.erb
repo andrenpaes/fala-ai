@@ -1,6 +1,10 @@
-<% title 'Avaliação de Palestras'%>
-<% subtitle 'Dê a sua opinião!'%>
+<% title @palestra.nome %>
+<% subtitle 'Avaliação geral'%>
 
+<p>
+  <b>Palestra:</b>
+  <%=h @palestra.nome %>
+</p>
 <p>
   <b>Palestrante:</b>
   <%=h @palestra.palestrante %>
@@ -8,40 +12,34 @@
 
 <p>
   <b>Data:</b>
-  <%=h @palestra.data %>
+  <%=h @palestra.data.strftime('%d/%m/%Y') %>
 </p>
 
 <p>
   <b>Horario:</b>
-  <%=h @palestra.horario %>
+  <%=h @palestra.horario.to_s(:time) %>
 </p>
 
-<% form_for(@avaliacao, :url => "#{palestra_path(@palestra)}/rate") do |f| %>
-  <%= f.error_messages %>
+<p>
+  <b>Avaliação Média:</b>
+  <%=h number_with_precision(@media, :precision => 2, :separator => ',') %>
+<p>
 
-  <p>
-    <%= f.label :valor %><br />
-    <table border="0" style="width: 160px">
-      <tr>
-      <%1.upto 5 do |nota| %>
-        <th style="text-align: center"><%= nota %></th>
-      <%end%>
-      </tr>
-      <tr>
-      <%1.upto 5 do |nota| %>
-        <td style="text-align: center"><%= f.radio_button :valor, nota %></td>
-      <%end%>
-      </tr>
-    </table>
-  </p>
-  <p>
-    <%= f.label :comentario %><br />
-    <%= f.text_area :comentario %>
-  </p>
-  <p>
-    <%= f.submit 'Avaliar!' %>
-  </p>
-<% end %>
-
-
-<%= link_to 'Voltar', palestras_path %>
+<%if not @avaliacoes.empty? %>
+<p>
+  <b>
+    <a href="#" onclick="$('comentarios').toggle(); return false;">
+      Mostrar Comentários
+    </a>
+  </b>
+  <div id="comentarios" style="display: none">
+  <% @avaliacoes.each do |avaliacao| %>
+	<p>
+      <b>Avaliação:</b>
+      <%=h avaliacao.valor%><br />
+      <b>Comentário:</b>
+      <%=h avaliacao.comentario%><br />
+  <% end %>
+  </div>
+</p>
+<%end%>

@@ -13,8 +13,8 @@
   <tr>
     <td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
-    <td><%=h palestra.data %></td>
-    <td><%=h palestra.horario %></td>
+    <td><%=h palestra.data.strftime('%d/%m/%Y') %></td>
+    <td><%=h palestra.horario.to_s(:time) %></td>
     <td><%= link_to 'Avaliar!', new_palestra_avaliacao_path(palestra) %></td>
   </tr>
 <% end %>

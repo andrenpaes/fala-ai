@@ -2440,3 +2440,1679 @@ Migrating to CreatePalestras (1)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("avaliacaos")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("avaliadors")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("palestras")[0m
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-06-30 19:20:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Palestra with ID=1):
+  app/controllers/palestras_controller.rb:12:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:20:34) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/palestras]
+  [4;36;1mPalestra Create (0.3ms)[0m   [0;1mINSERT INTO "palestras" ("data", "created_at", "nome", "updated_at", "horario", "palestrante") VALUES('2011-06-30', '2011-06-30 22:20:54', 'Teste', '2011-06-30 22:20:54', '2011-06-30 19:20:54', 'Eu')[0m
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:20:59) [GET]
+  [4;35;1mPalestra Load (0.7ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:21:03) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:21:06) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mAvaliacao Create (0.0ms)[0m   [0;1mSQLite3::ConstraintException: avaliacaos.valor may not be NULL: INSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('', '2011-06-30 22:21:06', NULL, '2011-06-30 22:21:06', NULL, 1)[0m
+
+ActiveRecord::StatementInvalid (SQLite3::ConstraintException: avaliacaos.valor may not be NULL: INSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('', '2011-06-30 22:21:06', NULL, '2011-06-30 22:21:06', NULL, 1)):
+  app/controllers/avaliacao_controller.rb:15:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:25:03) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:25:06) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/controllers/avaliacao_controller.rb:13:in `create'
+  app/controllers/avaliacao_controller.rb:13:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:26:55) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:22:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:27:11) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:27:14) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 64ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:27:17) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:22:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:28:45) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:28:48) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:28:52) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `avaliacaos_path' for #<ActionView::Base:0x1043f90f8>) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:6:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:29:11) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 67ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:29:17) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"", "valor"=>"1"}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mAvaliacao Create (0.5ms)[0m   [0;1mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('', '2011-06-30 22:29:17', NULL, '2011-06-30 22:29:17', 1, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:29:17) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:29:22) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:29:25) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:22:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:31:07) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:31:10) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:23:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:31:48) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:31:53) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #19 of app/views/avaliacao/new.html.erb:
+16:   <%=h @palestra.horario %>
+17: </p>
+18: 
+19: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+20:   <%= f.error_messages %>
+21: 
+22:   <p>
+
+    app/views/avaliacao/new.html.erb:19
+    app/controllers/avaliacao_controller.rb:23:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:40:06) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+Errno::ENOENT (No such file or directory - /Users/andre/Desenvolvimento/Projetos/rateIt/app/views/avaliacao/create.html.erb):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:40:18) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+Errno::ENOENT (No such file or directory - /Users/andre/Desenvolvimento/Projetos/rateIt/app/views/avaliacao/create.html.erb):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:40:47) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:40:50) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:40:56) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"", "valor"=>"1"}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mAvaliacao Create (0.6ms)[0m   [0mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('', '2011-06-30 22:40:56', NULL, '2011-06-30 22:40:56', 1, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:40:56) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:40:58) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:41:01) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+Errno::ENOENT (No such file or directory - /Users/andre/Desenvolvimento/Projetos/rateIt/app/views/avaliacao/create.html.erb):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:41:57) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 66ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:42:22) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:43:29) [GET]
+  [4;35;1mPalestra Load (0.5ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:43:31) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:43:35) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 67ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:44:00) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:44:03) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:52:57) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:53:14) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 55ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-06-30 19:54:38) [GET]
+  [4;36;1mPalestra Load (0.5ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 19:54:40) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:55:12) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:56:22) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `error_messages_for' for #<ActionView::Helpers::FormBuilder:0x104477c78>) on line #24 of app/views/avaliacao/new.html.erb:
+21: </p>
+22: 
+23: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+24:   <%= f.error_messages_for :avaliacao %>
+25: 
+26:   <p>
+27:     <%= f.label :valor %><br />
+
+    app/views/avaliacao/new.html.erb:24
+    app/views/avaliacao/new.html.erb:23
+    app/controllers/avaliacao_controller.rb:23:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:56:47) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:59:28) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `merge' for "valor":String) on line #24 of app/views/avaliacao/new.html.erb:
+21: </p>
+22: 
+23: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+24:   <%= f.error_messages 'valor' %>
+25: 
+26:   <p>
+27:     <%= f.label :valor %><br />
+
+    app/views/avaliacao/new.html.erb:24
+    app/views/avaliacao/new.html.erb:23
+    app/controllers/avaliacao_controller.rb:23:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 19:59:51) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `error_message' for #<ActionView::Helpers::FormBuilder:0x10413c450>) on line #40 of app/views/avaliacao/new.html.erb:
+37:       <%end%>
+38:       </tr>
+39:     </table>
+40:     <%= f.error_message :valor %>
+41:   </p>
+42:   <p>
+43:     <%= f.label :comentario %><br />
+
+    app/views/avaliacao/new.html.erb:40
+    app/views/avaliacao/new.html.erb:23
+    app/controllers/avaliacao_controller.rb:23:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 20:00:58) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `error_messages_for' for #<ActionView::Helpers::FormBuilder:0x104253fc8>) on line #24 of app/views/avaliacao/new.html.erb:
+21: </p>
+22: 
+23: <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
+24:   <%= f.error_messages_for 'avaliacao' %>
+25: 
+26:   <p>
+27:     <%= f.label :valor %><br />
+
+    app/views/avaliacao/new.html.erb:24
+    app/views/avaliacao/new.html.erb:23
+    app/controllers/avaliacao_controller.rb:6:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 20:01:12) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-06-30 20:01:24) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:27) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 21ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:32) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:35) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 20ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:36) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 65ms (View: 57, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:38) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:38) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:39) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 64ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:01:39) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-06-30 20:02:01) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:11:42) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:11:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ArgumentError (Unknown key(s): palestra):
+  app/controllers/palestras_controller.rb:13:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (19.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:12:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+
+ArgumentError (Unknown key(s): palestra):
+  app/controllers/palestras_controller.rb:13:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:15:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `where' for #<Class:0x1040bb0d0>):
+  app/controllers/palestras_controller.rb:13:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:19:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mAvaliacao Load (0.2ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `where' for #<Class:0x10431ce78>):
+  app/controllers/palestras_controller.rb:14:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (18.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:19:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mAvaliacao Load (0.2ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `where' for #<Class:0x10413f038>):
+  app/controllers/palestras_controller.rb:14:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:19:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mAvaliacao Load (0.2ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:23:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:23:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.2ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:25:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:31:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:34:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:35:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:35:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:36:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:36:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:37:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:37:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null) [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:40:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:40:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:41:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:41:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:41:10) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:41:20) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:41:22) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:41:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 11:41:29) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 11:41:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"BLAH!!!!", "valor"=>"5"}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mAvaliacao Create (0.3ms)[0m   [0mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('BLAH!!!!', '2011-07-01 14:41:37', NULL, '2011-07-01 14:41:37', 5, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:41:37) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:41:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:43:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (undefined method `number_to_human' for #<ActionView::Base:0x104373f48>) on line #25 of app/views/palestras/show.html.erb:
+22: 
+23: <p>
+24:   <b>Avaliação Média:</b>
+25:   <%=h number_to_human(@media, :precision => 2) %>
+26: <p>
+27: 
+28: <%if not @avaliacoes.empty? %>
+
+    app/views/palestras/show.html.erb:25
+    app/controllers/palestras_controller.rb:16:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:46:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (can't convert Float into String) on line #25 of app/views/palestras/show.html.erb:
+22: 
+23: <p>
+24:   <b>Avaliação Média:</b>
+25:   <%=h sprintf(@media, '.2f') %>
+26: <p>
+27: 
+28: <%if not @avaliacoes.empty? %>
+
+    app/views/palestras/show.html.erb:25:in `sprintf'
+    app/views/palestras/show.html.erb:25
+    app/controllers/palestras_controller.rb:16:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:46:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+
+ActionView::TemplateError (can't convert Float into String) on line #25 of app/views/palestras/show.html.erb:
+22: 
+23: <p>
+24:   <b>Avaliação Média:</b>
+25:   <%=h sprintf(@media, '.2f').to_s %>
+26: <p>
+27: 
+28: <%if not @avaliacoes.empty? %>
+
+    app/views/palestras/show.html.erb:25:in `sprintf'
+    app/views/palestras/show.html.erb:25
+    app/controllers/palestras_controller.rb:16:in `show'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:47:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:47:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 63ms (View: 56, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:48:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:51:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:51:35) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:51:36) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:51:37) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:52:07) [GET]
+  [4;36;1mPalestra Load (0.3ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 11:52:11) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 11:53:06) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 11:53:18) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>"Ha!", "valor"=>"5"}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mAvaliacao Create (0.6ms)[0m   [0;1mINSERT INTO "avaliacaos" ("comentario", "created_at", "avaliador_id", "updated_at", "valor", "palestra_id") VALUES('Ha!', '2011-07-01 14:53:18', NULL, '2011-07-01 14:53:18', 5, 1)[0m
+Redirected to http://localhost:3000/palestras
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 11:53:18) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:53:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:54:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 11:54:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;36;1mAvaliacao Load (0.1ms)[0m   [0;1mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#show (for 127.0.0.1 at 2011-07-01 12:00:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT avg("avaliacaos".valor) AS avg_valor FROM "avaliacaos" WHERE (palestra_id = 1) [0m
+  [4;35;1mAvaliacao Load (0.1ms)[0m   [0mSELECT * FROM "avaliacaos" WHERE (palestra_id = 1 and comentario is not null and comentario <> '') [0m
+Rendering template within layouts/themes
+Rendering palestras/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 12:00:41) [GET]
+  [4;36;1mPalestra Load (0.4ms)[0m   [0;1mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 12:00:44) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:01:35) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:06:45) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 12:12:07) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+
+ActionView::TemplateError (undefined method `styleshhet_include_tag' for #<ActionView::Base:0x1042459f0>) on line #6 of app/views/layouts/themes.html.erb:
+3:     <title><%=h SITE_CONFIG[:app_name] %> | <%=h yield(:title) %></title>
+4:     <%= use_theme('bitbucket') %>
+5:     <%= javascript_include_tag 'prototype' %>
+6:     <%= styleshhet_include_tag 'geral' %>
+7:   </head>
+8:   <body>
+9:   
+
+    app/views/layouts/themes.html.erb:6
+    app/controllers/avaliacao_controller.rb:6:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 12:12:45) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:12:50) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:16:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:20:23) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:20:32) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:20:51) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:21:09) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:21:19) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:22:11) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:22:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 64ms (View: 55, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:22:47) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:22:54) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:23:04) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:23:16) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:23:27) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 66ms (View: 57, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:23:37) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.2ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:25:17) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.2ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:25:41) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:27:34) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:27:58) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:28:08) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:28:15) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 12:28:26) [GET]
+  [4;35;1mPalestra Load (0.4ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 52ms (View: 4, DB: 0) | 200 OK [http://localhost/palestras]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 12:28:34) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 12:33:24) [GET]
+  [4;35;1mPalestra Load (0.3ms)[0m   [0mSELECT * FROM "palestras" [0m
+Rendering template within layouts/themes
+Rendering palestras/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]

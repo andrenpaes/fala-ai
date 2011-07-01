@@ -1,6 +1,10 @@
-<% title 'Avaliação de Palestras'%>
+<% title @palestra.nome %>
 <% subtitle 'Dê a sua opinião!'%>
 
+<p>
+  <b>Palestra:</b>
+  <%=h @palestra.nome %>
+</p>
 <p>
   <b>Palestrante:</b>
   <%=h @palestra.palestrante %>
@@ -8,16 +12,19 @@
 
 <p>
   <b>Data:</b>
-  <%=h @palestra.data %>
+  <%=h @palestra.data.strftime('%d/%m/%Y') %>
 </p>
 
 <p>
   <b>Horario:</b>
-  <%=h @palestra.horario %>
+  <%=h @palestra.horario.to_s(:time) %>
 </p>
 
 <% form_for(@avaliacao, :url => palestra_avaliacao_index_path(@palestra)) do |f| %>
-  <%= f.error_messages %>
+  <%= error_messages_for :avaliacao, 
+        :header_message => "Oops - Não conseguimos gravar a sua avaliação...", 
+        :message => "Os seguintes campos estão com problemas:", 
+        :header_tag => :h1  %>
 
   <p>
     <%= f.label :valor %><br />

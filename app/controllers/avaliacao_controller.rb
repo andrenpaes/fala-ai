@@ -6,17 +6,21 @@ class AvaliacaoController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
     end
+    puts "Blah!"
   end
 
   def create
     @palestra = Palestra.find(params[:palestra_id])
-    @rating = Avaliacao.new(params[:avaliacao])
-    @rating.palestra = @palestra
-    @rating.save
+    @avaliacao = Avaliacao.new(params[:avaliacao])
+    @avaliacao.palestra = @palestra
 
-    respond_to do |format|
-      format.html { redirect_to(palestras_url) }
-      format.xml  { head :ok }
+    if @avaliacao.save
+      respond_to do |format|
+        format.html { redirect_to(palestras_url) }
+        format.xml  { head :ok }
+      end
+    else
+      render :action => :new
     end
   end
 end

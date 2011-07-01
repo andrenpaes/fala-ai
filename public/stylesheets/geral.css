@@ -1,0 +1,13 @@
+.errorExplanation {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding:15px 10px 15px 150px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+
+	color: #D8000C;
+	text-decoration: bold;
+
+	background-color: #FFBABA;
+	background-image: url('/images/error.png')
+}

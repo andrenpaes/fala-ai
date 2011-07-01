@@ -1,7 +1,9 @@
 <html>
   <head>
     <title><%=h SITE_CONFIG[:app_name] %> | <%=h yield(:title) %></title>
-    <%= use_theme('slicehost') %>
+    <%= use_theme('bitbucket') %>
+    <%= javascript_include_tag 'prototype' %>
+    <%= stylesheet_link_tag 'geral' %>
   </head>
   <body>
   
@@ -9,19 +11,14 @@
       <div id='header'>
 
         <div id='logo'>
-          <%= link_to SITE_CONFIG[:app_name] %>
+          <%= link_to SITE_CONFIG[:app_name], :root %>
         </div>
 
         <ul id='navigation'>
-          <li><%= link_to "Home" %></li>
-          
-          <% if session[:user_id].blank? %>
-            <li><%= link_to "Log in" %></li>
-            <li><%= link_to "Contact us" %></li>
+          <li><%= link_to "Home", :root %></li>
 
-          <% else %>
-            <li><%= link_to "Log out <span class=\"small\">(username)</span>" %></li>
-          
+          <% if not session[:user_id].blank? %>
+            <li><%= link_to "Log out <span class=\"small\">(username)</span>" %></li>          
           <% end %>
         </ul>
         <div class='clear'></div>
