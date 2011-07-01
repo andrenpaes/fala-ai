@@ -1,9 +1,9 @@
 .errorExplanation {
 	border: 1px solid;
 	margin: 10px 0px;
-	padding:15px 10px 15px 150px;
+	padding:15px 10px 15px 90px;
 	background-repeat: no-repeat;
-	background-position: 10px center;
+	background-position: 10px top;
 
 	color: #D8000C;
 	text-decoration: bold;

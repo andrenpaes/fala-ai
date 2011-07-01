@@ -4116,3 +4116,59 @@ Processing PalestrasController#index (for 127.0.0.1 at 2011-07-01 12:33:24) [GET
 Rendering template within layouts/themes
 Rendering palestras/index
 Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AvaliacaoController#new (for 127.0.0.1 at 2011-07-01 12:46:35) [GET]
+  Parameters: {"palestra_id"=>"1"}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao/new]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:46:38) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:48:22) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:48:31) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 62ms (View: 54, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:49:01) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:49:27) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;35;1mPalestra Load (0.1ms)[0m   [0mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
+
+
+Processing AvaliacaoController#create (for 127.0.0.1 at 2011-07-01 12:49:46) [POST]
+  Parameters: {"commit"=>"Avaliar!", "palestra_id"=>"1", "authenticity_token"=>"jmMT6xeQpnRr/C7i05aptVJdfgru6v2U//NvY3ZwLZA=", "avaliacao"=>{"comentario"=>""}}
+  [4;36;1mPalestra Load (0.1ms)[0m   [0;1mSELECT * FROM "palestras" WHERE ("palestras"."id" = 1) [0m
+Rendering template within layouts/themes
+Rendering avaliacao/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/palestras/1/avaliacao]
