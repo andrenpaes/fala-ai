@@ -1,4 +1,7 @@
 class PalestrasController < ApplicationController
+  caches_action :index
+  caches_action :show
+
   def index
     @palestras = Palestra.all(:order => 'data DESC, horario ASC')
     @datas = []
@@ -8,7 +11,6 @@ class PalestrasController < ApplicationController
       @palestras_por_data[palestra.data] = [] if @palestras_por_data[palestra.data].nil?
       @palestras_por_data[palestra.data] << palestra
     }
-    puts @palestras_por_data.keys.size
 
     respond_to do |format|
       format.html # index.html.erb

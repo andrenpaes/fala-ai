@@ -8,12 +8,14 @@
     <th>Palestra</th>
     <th>Palestrante</th>
     <th>Horário</th>
+    <th>Avaliações</th>
   </tr>
 <% @palestras_por_data[data].each do |palestra| %>
   <tr style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
     <td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
     <td><%=h palestra.horario.to_s(:time) %></td>
+    <td><%=h palestra.avaliacao.count %></td>
     <td><%= link_to 'Avaliar!', new_palestra_avaliacao_path(palestra) %></td>
   </tr>
 <% end %>

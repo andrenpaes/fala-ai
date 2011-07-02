@@ -22,14 +22,19 @@
 
 <p>
   <b>Avaliação Média:</b>
-  <%=h number_with_precision(@media, :precision => 2, :separator => ',') %>
+  <%if @media %>
+    <%=h number_with_precision(@media, :precision => 2, :separator => ',') %>
+    (<%=h @palestra.avaliacao.count %>)
+  <%else%> - <%end%>
 <p>
+
+<p><%= link_to 'Avaliar!', new_palestra_avaliacao_path(@palestra) %></p>
 
 <%if not @avaliacoes.empty? %>
 <p>
   <b>
     <a href="#" onclick="$('comentarios').toggle(); return false;">
-      Mostrar Comentários
+      Mostrar Comentários (<%=h @avaliacoes.size%>)
     </a>
   </b>
   <div id="comentarios" style="display: none">
