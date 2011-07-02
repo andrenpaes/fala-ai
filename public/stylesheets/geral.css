@@ -11,3 +11,10 @@
 	background-color: #FFBABA;
 	background-image: url('/images/error.png')
 }
+
+tr.par {
+	background-color: #F9E7C4;
+}
+tr.impar {
+	/*background-color: #F9E7C4;*/
+}
