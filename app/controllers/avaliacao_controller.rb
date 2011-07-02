@@ -15,7 +15,6 @@ class AvaliacaoController < ApplicationController
 
     if @avaliacao.save
       expire_action :controller => 'palestras', :action => :index
-      expire_action :controller => 'palestras', :action => :show
       respond_to do |format|
         format.html { redirect_to(palestras_url) }
         format.xml  { head :ok }

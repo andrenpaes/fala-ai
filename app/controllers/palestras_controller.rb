@@ -1,6 +1,5 @@
 class PalestrasController < ApplicationController
   caches_action :index
-  caches_action :show
 
   def index
     @palestras = Palestra.all(:order => 'data DESC, horario ASC')
