@@ -3,7 +3,7 @@ module PalestrasHelper
 
   def em_andamento?(palestra)
     agora = Time.now
-    put agora
+    puts agora
     hora_palestra = palestra.horario.hour + (palestra.horario.min / 60.0)
     if palestra.data == Date.today
       return true if hora_palestra.ceil == agora.hour
