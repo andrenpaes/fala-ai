@@ -17,7 +17,6 @@
   })();
   </script>
   <body>
-  
     <div id='root'>
       <div id='header'>
 
@@ -27,7 +26,7 @@
 
         <ul id='navigation'>
           <li><%= link_to "Home", :root %></li>
-          <li><%= link_to "Creditos", :creditos %></li>
+          <li><%= link_to "Créditos", :creditos %></li>
 
           <% if not session[:user_id].blank? %>
             <li><%= link_to "Log out <span class=\"small\">(username)</span>" %></li>          
@@ -46,7 +45,7 @@
 
         <div id='root_footer'></div>
       </div>
-      
+
       <div id='footer'>
         Equipe: <a href="http://twitter/andrenpaes">André Rodrigues</a>
           | <a href="http://twitter/fabricio_lemos">Fabrício Lemos</a>
@@ -55,8 +54,8 @@
           | <a href="http://twitter/elvisdelima">Elvis de Lima</a>
           | <a href="http://twitter/cengenharia">Araujo</a>
           | <a href="http://twitter/bsao">Robson Junior</a>
-        <br />
-        &copy <%= Time.now.year %> <%=h SITE_CONFIG[:copyright] %>. All Rights Reserved.
+        - 
+        <%= link_to "Créditos", :creditos %>
       </div>
     </div>
   </body>
