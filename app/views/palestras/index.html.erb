@@ -19,7 +19,8 @@
 	  <% if palestra.media_avaliacoes.nil? %>
 	  -
 	  <% else %>
-      <%=h palestra.media_avaliacoes %> (<%=h palestra.quantidade_avaliacoes %>)
+      <%=h number_with_precision(palestra.media_avaliacoes, :precision => 2, :separator => ',')  %>
+      (<%=h palestra.quantidade_avaliacoes %>)
       <%end%>
     </td>
     <td><%= link_to 'Avaliar!', new_palestra_avaliacao_path(palestra) %></td>
