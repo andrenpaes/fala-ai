@@ -7,15 +7,21 @@
   <tr>
     <th>Palestra</th>
     <th>Palestrante</th>
-    <th>Horário</th>
-    <th>Avaliações</th>
+    <th style="text-align: center">Horário</th>
+    <th style="text-align: center">Avaliação</th>
   </tr>
 <% @palestras_por_data[data].each_with_index do |palestra, i| %>
-  <tr class="<%=i % 2 == 0? 'par': 'impar' %>" style="background-color: <%=h '#AAAAAA' if em_andamento?(palestra) %>">
+  <tr class="<%=i % 2 == 0? 'par': 'impar' %>" style="background-color: <%=h '#AAAAAA' if palestra.em_andamento? %>">
     <td><%= link_to palestra.nome, palestra %></td>
     <td><%=h palestra.palestrante %></td>
-    <td><%=h palestra.horario.to_s(:time) %></td>
-    <td><%=h palestra.avaliacao.count %></td>
+    <td style="text-align: center"><%=h palestra.horario.to_s(:time) %></td>
+    <td style="text-align: center">
+	  <% if palestra.media_avaliacoes.nil? %>
+	  -
+	  <% else %>
+      <%=h palestra.media_avaliacoes %> (<%=h palestra.quantidade_avaliacoes %>)
+      <%end%>
+    </td>
     <td><%= link_to 'Avaliar!', new_palestra_avaliacao_path(palestra) %></td>
   </tr>
 <% end %>

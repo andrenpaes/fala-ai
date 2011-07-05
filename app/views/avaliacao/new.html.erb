@@ -43,7 +43,8 @@
   </p>
   <p>
     <%= f.label :comentario %><br />
-    <%= f.text_area :comentario %>
+    <%= f.text_area :comentario, :style => "height: 150px", :onKeyDown => "limitText(this, 'countdown', 300)" %><br/>
+    Caracteres restantes: <span id="countdown">300</span>
   </p>
   <p>
     <%= f.submit 'Avaliar!' %>
@@ -52,3 +53,13 @@
 
 
 <%= link_to 'Voltar', palestras_path %>
+
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		document.getElementById('countdown').innerHTML = limitNum - limitField.value.length;
+	}
+}
+</script>

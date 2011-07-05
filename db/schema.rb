@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 2) do
 
   create_table "avaliacaos", :force => true do |t|
-    t.integer  "valor",        :null => false
-    t.string   "comentario"
-    t.integer  "palestra_id",  :null => false
+    t.integer  "valor",                       :null => false
+    t.text     "comentario",   :limit => 255
+    t.integer  "palestra_id",                 :null => false
     t.integer  "avaliador_id"
     t.datetime "created_at"
     t.datetime "updated_at"

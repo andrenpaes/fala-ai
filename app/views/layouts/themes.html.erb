@@ -27,6 +27,7 @@
 
         <ul id='navigation'>
           <li><%= link_to "Home", :root %></li>
+          <li><%= link_to "Creditos", :creditos %></li>
 
           <% if not session[:user_id].blank? %>
             <li><%= link_to "Log out <span class=\"small\">(username)</span>" %></li>          

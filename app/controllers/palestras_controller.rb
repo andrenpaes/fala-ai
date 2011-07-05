@@ -19,8 +19,8 @@ class PalestrasController < ApplicationController
 
   def show
     @palestra = Palestra.find(params[:id])
-    @media = Avaliacao.average(:valor, :conditions => ["palestra_id = ?", @palestra.id])
-    @avaliacoes = Avaliacao.all(:conditions => ["palestra_id = ? and comentario is not null and comentario <> ''", @palestra.id])
+    @media = @palestra.media_avaliacoes
+    @avaliacoes = @palestra.avaliacoes_com_comentario
 
     respond_to do |format|
       format.html # show.html.erb
