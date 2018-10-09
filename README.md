@@ -1,6 +1,6 @@
 # Fala aí!
 
-Projeto para avaliação de palestras.
+Projeto para avaliação de palestras!
 A idéia desse projeto surgiu de um grupo formado no Workshop ministrado pelo Daniel Wildt (@dwildt) no Agile Brazil 2011
 
 # Documentação
